@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+labtk
 
 # Jupyter Notebook
 .ipynb_checkpoints
