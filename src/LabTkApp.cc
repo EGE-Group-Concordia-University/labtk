@@ -161,7 +161,7 @@ void LabTkApp::sourceRcFile()
   if (Tcl_EvalFile(interp,"~//.labtkrc.tcl")!=TCL_OK)
     {
       Tcl_Eval(interp,
-	"file copy //usr//local//share//ectk//ectkrc.tcl ~//.labtkrc.tcl");
+	"file copy //usr//local//share//labtk//labtk.tcl ~//.labtkrc.tcl");
       Tcl_EvalFile(interp,"~//.labtkrc.tcl");
     }
 }

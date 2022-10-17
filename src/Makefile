@@ -36,7 +36,9 @@ clean:
 	rm -f labtk
 
 install: labtk
-	cp labtk /usr/local/bin
+    mkdir -p /usr/local/share/labtk
+    cp labtkrc.tcl /usr/local/share/labtk
+    cp labtk /usr/local/bin
 
 LabTkApp.o: LabTkApp.cc LabTkApp.h
 	$(CC) -c LabTkApp.cc
