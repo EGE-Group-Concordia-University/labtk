@@ -17,7 +17,8 @@ To install LabTk system wide
 ```
 sudo make install
 ```
-This will copy ```labtk``` to ```/usr/local/bin```
+This will copy ```labtk``` to ```/usr/local/bin```<br>
+This will copy ```labtkrc.tcl``` to ```/usr/local/share/labtk```
 
 To clean up the working directory
 ```
