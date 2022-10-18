@@ -4,7 +4,7 @@
 // LabTk - Laboratory Tool Kit
 //
 // (c) Rolf Wuthrich
-//     2015 - 2020 Concordia University
+//     2015 - 2022 Concordia University
 //
 // author:  Rolf Wuthrich
 // email:   rolf.wuthrich@concordia.ca

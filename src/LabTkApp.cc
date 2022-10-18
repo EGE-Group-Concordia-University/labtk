@@ -4,7 +4,7 @@
 // Definition of the class LabTkApp
 //
 // (c) Rolf Wuthrich
-//     2015 - 2021 Concordia University
+//     2015 - 2022 Concordia University
 //
 // author:  Rolf Wuthrich
 // email:   rolf.wuthrich@concordia.ca
@@ -38,7 +38,7 @@ using namespace std;
 
 static CONST char* labtk_license =
 "   LabTk The Laboratory tool kit\n"
-"   Copyright (c) 2015-2021, Rolf Wuthrich <rolf.wuthrich@concordia.ca>\n"
+"   Copyright (c) 2015-2022, Rolf Wuthrich <rolf.wuthrich@concordia.ca>\n"
 "   All rights reserved.\n "
 "   \n"
 "   Redistribution and use in source and binary forms, with or without\n"
