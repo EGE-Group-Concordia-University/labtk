@@ -22,7 +22,7 @@
 //
 // ---------------------------------------------------------------
 
-#define labTkVersion "1.2"
+#define labTkVersion "1.3"
 
 #include <tcl.h>
 #include <cstring>
@@ -77,7 +77,6 @@ static CONST char* labtk_license =
 void labTk_exitHandler(ClientData clientData)
 {
   LabTkApp* app=(LabTkApp *)clientData;
-  Tcl_Free(app->prompt);
   cout << "exiting LabTk ...\n";
 }
 
@@ -101,26 +100,20 @@ LabTkApp::LabTkApp(int argc, char **argv) : gecoApp(argc,argv)
     cout << "\tL a b T k\n";
     cout <<"\tThe laboratory tool kit interface\n";
     cout << "\tVersion " << labTkVersion << "\n";
-    cout << "\tlast modified August 2021\n";
+    cout << "\tlast modified October 2022\n";
     cout << "\n";
-    cout << "\tCopyright (C) 2015-2021\n";
+    cout << "\tCopyright (C) 2015-2022\n";
     cout << "\tRolf Wuthrich, Concordia University, Canada\n";
     cout << "\tThis is free software; type 'puts $::labtk::license' for more details.\n";
     cout << "\n";
-    cout << "\tLabTk home: http://ege.encs.concordia.ca/ectk.html\n";
+    cout << "\tLabTk home: https://github.com/EGE-Group-Concordia-University/labtk\n";
     cout << "\tFor help see the man pages.\n";
     cout << "\n";
     cout.flush();
   }
 
-  prompt=Tcl_Alloc(9);
-  strcpy(prompt, "LabTk > ");
   registerGlobalVars();
   Tcl_CreateExitHandler(labTk_exitHandler, this);
-
-  //Tcl_EvalFile(interp,"//usr//local//share//labtk//labtklib.tcl");
-  //Tcl_EvalFile(interp,"labtklib.tcl");
-  //Tcl_EvalFile(interp,"//usr//local//etc//labtk//labtk.labtkrc.tcl");
   if (argc==2) Tcl_EvalFile(interp,argv[1]);
   sourceRcFile();
 }
